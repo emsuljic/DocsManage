@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AnyMxRecord } from 'dns';
+//import { AnyMxRecord } from 'dns';
 
 @Component({
   selector: 'app-root',
