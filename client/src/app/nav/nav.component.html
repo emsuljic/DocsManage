@@ -1,28 +1,35 @@
-<nav class="navbar navbar-expand-md navbar-blue fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="#">Docs Manage</a>
+        <img src="./assets/logo.png" style="height: 20px;">
+        <a class="navbar-brand" routerLink='/' routerLinkActive='active'>Docs Manage</a>
 
         <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Početna stranica</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Knjige protokola</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ulazno/izlz. dokumenti</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pretraga dokumenata</a>
-            </li>
+            <ng-container>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/'>Početna stranica</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/protocolBook' routerLinkActive='active'>Knjige protokola</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/documents' routerLinkActive='active'>Ulazno/izlz. dokumenti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/administration' routerLinkActive='active'>Administracija</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/'>Pretraga dokumenata</a>
+                </li>
+            </ng-container>
+
         </ul>
 
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-            <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+            <a class="dropdown-toggle text-light" dropdownToggle>Pozdrav {{user.username | titlecase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
-                <a class="dropdown-item">Edit Profile</a>
+                <a class="dropdown-item">Uredi profil</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" (click)="logout()">Logout</a>
+                <a class="dropdown-item" (click)="logout()">Odjava</a>
             </div>
         </div>
 
@@ -32,7 +39,7 @@
                 placeholder="Username">
             <input name="password" [(ngModel)]="model.password" class="form-control mr-sm-2" type="password"
                 placeholder="Password">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Prijava</button>
         </form>
     </div>
 </nav>

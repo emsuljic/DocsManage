@@ -1,38 +1,75 @@
-<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
-    <h2 class="text-center text-primary">Registruj se</h2>
-    <hr>
-
-    <div class="form-group">
-        <input type="text" class="form-control" name="name" [(ngModel)]="model.ime"
-            placeholder="Ime">
+<div class="container">
+    <div class="div1">
+        Registracija
     </div>
+    
+        <div class="div2" style="text-align: center;">
+            Prilikom registracije automatski Vam se dodjeljuje najniži nivo pristupa
+        </div>
 
-    <div class="form-group">
-        <input type="text" class="form-control" name="surname" [(ngModel)]="model.prezime"
-            placeholder="Prezime">
-    </div>
+        <div class="div3" style="text-align: center;">
+            Ovu opciju admin može promijeniti naknodno shodno Vašem napredovanju
+        </div>
+   
 
-    <div class="form-group">
-        <input type="text" class="form-control" name="birthDate" [(ngModel)]="model.datumRodjenja"
-            placeholder="Datum rođenja">
-    </div>
+    <div class="div4">
+            <p>Arhiva dokumenata</p>
+            <p>upravljanje arhivom dokumenata</p>
+        </div>
 
-    <div class="form-group">
-        <input type="text" class="form-control" name="city" [(ngModel)]="model.mjestoStanovanja"
-            placeholder="Mjesto stanovanja">
-    </div>
+        <div class="div5">
+                <p>Arhiva dokumenata</p>
+                <p>upravljanje arhivom dokumenata</p>
+            </div>
 
-    <div class="form-group">
-        <input type="text" class="form-control" name="username" [(ngModel)]="model.username"
-            placeholder="Korisničko ime">
-    </div>
+            <div class="div6">
+                    <p>Arhiva dokumenata</p>
+                    <p>upravljanje arhivom dokumenata</p>
+                </div>
 
-    <div class="form-group">
-        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" placeholder="Lozinka">
-    </div>
+                <div class="div7">
+                        <p>Arhiva dokumenata</p>
+                        <p>upravljanje arhivom dokumenata</p>
+                    </div>
 
-    <div class="form-group text-center">
-        <button class="btn btn-success mr-2" type="submit">Registruj</button>
-        <button class="btn btn-default mr-2" type="button" (click)="cancel()">Otkaži</button>
+        <div class="div8">
+            <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+                <h2 class="text-center text-primary">Registruj se</h2>
+                <hr>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="model.ime" placeholder="Ime">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="surname" [(ngModel)]="model.prezime"
+                        placeholder="Prezime">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="birthDate" [(ngModel)]="model.datumRodjenja"
+                        placeholder="Datum rođenja">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="city" [(ngModel)]="model.mjestoStanovanja"
+                        placeholder="Mjesto stanovanja">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="model.username"
+                        placeholder="Korisničko ime">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" [(ngModel)]="model.password"
+                        placeholder="Lozinka">
+                </div>
+
+                <div class="form-group text-center">
+                    <button class="btn btn-success mr-2" type="submit">Registruj</button>
+                    <button class="btn btn-default mr-2" type="button" (click)="cancel()">Otkaži</button>
+                </div>
+            </form>
+        </div>
     </div>
-</form>

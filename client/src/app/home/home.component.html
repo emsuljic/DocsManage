@@ -1,19 +1,22 @@
 <div class="container mt-5">
     <div *ngIf="!registerMode" style="text-align: center;">
         <!-- uvodni dio teksta za početnu stranicu -->
-        <h1>UNIJETI TEKST</h1>
-        <p class="lead">Upravljajte dokumentima vrlo lahko.. sve što trebate uraditi je prijaviti se!</p>
-        <div class="text-center">
+        <img src="./assets/logo.png" style="height: 150px; margin-bottom: 20px;">
+        <hr>
+        <p class="lead" style="font-family: monospace; display: inline-block; padding: 5px; margin-top: 5px;">
+            Jednostavno i pristupačno rješenje za upravljanje dokumentima</p>
+        <hr>
+        <hr>
+        <p style="text-align: center; font-size: large;">Rješenje koje pomaže u <b>planiranju, organizovanju,
+                upravljanju i praćenju</b>
+            dokumenata i informacija</p>
+        <div class="text-center" style="padding-top: 30px;">
             <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2">Registruj se</button>
         </div>
     </div>
 
     <div *ngIf="registerMode" class="container">
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <app-register (cancelRegister)="cancelRegisterMode($event)">
-                </app-register>
-            </div>
-        </div>
+            <app-register (cancelRegister)="cancelRegisterMode($event)">
+            </app-register>
     </div>
 </div>
