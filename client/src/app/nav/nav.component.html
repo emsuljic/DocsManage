@@ -3,8 +3,8 @@
         <img src="./assets/logo.png" style="height: 20px;">
         <a class="navbar-brand" routerLink='/' routerLinkActive='active'>Docs Manage</a>
 
-        <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
-            <ng-container>
+        <ul class="navbar-nav mr-auto">
+            <ng-container *ngIf="accountService.currentUser$ | async">
                 <li class="nav-item">
                     <a class="nav-link" routerLink='/'>Početna stranica</a>
                 </li>
@@ -21,7 +21,9 @@
                     <a class="nav-link" routerLink='/'>Pretraga dokumenata</a>
                 </li>
             </ng-container>
-
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/errors' routerLinkActive='active'>Errors</a>
+            </li>
         </ul>
 
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>

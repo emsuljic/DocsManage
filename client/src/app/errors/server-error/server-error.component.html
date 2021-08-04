@@ -1,0 +1,15 @@
+<h4>Internal server error - ponovno pokretanje stranice riješilo bi problem!</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class="font-weight-bold">Poruka: Ukoliko vidite ovu poruku onda problem nije na strani Angulara.</p>
+    <p>Šta uraditi dalje?</p>
+    <ol>
+        <li>Otvorite Chrome dev tools</li>
+        <li>Odaberite opciju Inspect network</li>
+        <li>Provjerite neuspjeli zahtjev</li>
+        <li>Pregledajte URL zahtjeva / provjerite je li tačan</li>
+        <li>Reproducirati grešku u Postman-u - ako vidimo isti odgovor, problem nije u Angular-u</li>
+    </ol>
+    <p>Slijedi 'stack trace' - ovdje bi Vaša potraga za problemom trebala početi!</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
