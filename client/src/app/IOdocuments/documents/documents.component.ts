@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-documents',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./documents.component.css']
 })
 export class DocumentsComponent implements OnInit {
+  @Output() cancelDocument = new EventEmitter();
+  model: any = {};
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  cancel(){
+    this.cancelDocument.emit(false);
+  }
+
+  back(){
+    this.router.navigateByUrl('/');
+  }
 }

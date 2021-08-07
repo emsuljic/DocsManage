@@ -1,1 +1,60 @@
-<p>documents works!</p>
+<button (click)="back()" class="btn btn-primary btn-md mr-2 mb-5">Vrati na početnu stranicu</button>
+
+<form #registerForm="ngForm" autocomplete="off">
+    <h2 class="text-center text-primary">Unos dokumenta</h2>
+    <hr>
+
+    <div class="form-group">
+        <input type="number" class="form-control" name="id" [(ngModel)]="model.Id" placeholder="Protokol broj">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" name="naslovDoc" [(ngModel)]="model.NaslovDokumenta"
+            placeholder="Naslov dokumenta">
+    </div>
+
+    <div class="form-group">
+        <input type="enum" class="form-control" name="vrsta" [(ngModel)]="model.VrstaDokumenta"
+            placeholder="Vrsta dokumenta">
+    </div>
+
+    <div class="form-group">
+        <input type="enum" class="form-control" name="tip" [(ngModel)]="model.TipDokumenta" placeholder="Tip Dokumenta">
+    </div>
+
+    <div class="form-group">
+        <input type="date" class="form-control" name="datum" [(ngModel)]="model.DatumDokumenta"
+            placeholder="Datum dokumenta">
+    </div>
+
+    <div class="form-group">
+        <input type="date" class="form-control" name="datumUnosa" [(ngModel)]="model.DatumUnosaDokumenta"
+            placeholder="Datum unosa dokummenta">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="fizickoLice" [(ngModel)]="model.FizickoLice" placeholder="Fizičko lice">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" name="napomena" [(ngModel)]="model.Napomena" placeholder="Napomena">
+    </div>
+
+    <div class="form-group">
+        <input type="number" class="form-control" name="vrijesnot" [(ngModel)]="model.Vrijednost"
+            placeholder="Vrijednost">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="posiljaoc" [(ngModel)]="model.Posiljaoc" placeholder="Pošiljaoc">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="primaoc" [(ngModel)]="model.Primaoc" placeholder="Primaoc">
+    </div>
+
+    <div class="form-group text-center">
+        <button class="btn btn-success mr-2" type="submit">Unesi</button>
+        <button class="btn btn-default mr-2" type="button" (click)="cancel()">Otkaži</button>
+    </div>
+</form>
