@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace API.Controllers
             {
                 Ime = registerDto.Ime,
                 Prezime = registerDto.Prezime,
-                DatumRodjenja = registerDto.DatumRodjenja,
+                DatumRodjenja = Convert.ToDateTime(registerDto.DatumRodjenja),
                 MjestoStanovanja = registerDto.MjestoStanovanja,
                 UserName = registerDto.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),

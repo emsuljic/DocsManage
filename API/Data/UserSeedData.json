@@ -1,0 +1,172 @@
+[
+    {
+        "Ime": "Linda",
+        "Prezime": "Kramer",
+        "Spol": "female",
+        "UserName": "Linda",
+        "DatumRodjenja": "1952-06-27",
+        "Kreiran": "2020-06-25",
+        "PosljednjeAktivan": "2020-05-29",
+        "MjestoStanovanja": "Oley",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/35.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Lois",
+        "Prezime": "Stanton",
+        "Spol": "female",
+        "UserName": "Lois",
+        "DatumRodjenja": "1961-10-01",
+        "Kreiran": "2019-03-16",
+        "PosljednjeAktivan": "2020-05-08",
+        "MjestoStanovanja": "Coleville",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/87.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Freida",
+        "Prezime": "Moody",
+        "Spol": "female",
+        "UserName": "Freida",
+        "DatumRodjenja": "1981-01-27",
+        "Kreiran": "2020-05-27",
+        "PosljednjeAktivan": "2020-06-16",
+        "MjestoStanovanja": "Hemlock",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/9.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Bonita",
+        "Prezime": "Goff",
+        "Spol": "female",
+        "UserName": "Bonita",
+        "DatumRodjenja": "1980-08-23",
+        "Kreiran": "2019-10-17",
+        "PosljednjeAktivan": "2020-05-03",
+        "MjestoStanovanja": "Elfrida",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/51.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Latisha",
+        "Prezime": "Thornton",
+        "Spol": "female",
+        "UserName": "Latisha",
+        "DatumRodjenja": "1985-02-09",
+        "Kreiran": "2020-02-08",
+        "PosljednjeAktivan": "2020-05-06",
+        "MjestoStanovanja": "Fairacres",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/89.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Woods",
+        "Prezime": "Freeman",
+        "Spol": "male",
+        "UserName": "Woods",
+        "DatumRodjenja": "1970-10-06",
+        "Kreiran": "2019-07-14",
+        "PosljednjeAktivan": "2020-06-29",
+        "MjestoStanovanja": "Norfolk",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/men/64.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "King",
+        "Prezime": "Waller",
+        "Spol": "male",
+        "UserName": "King",
+        "DatumRodjenja": "1974-05-28",
+        "Kreiran": "2020-01-25",
+        "PosljednjeAktivan": "2020-05-22",
+        "MjestoStanovanja": "Jacumba",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/men/5.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Lamb",
+        "Prezime": "Figueroa",
+        "Spol": "male",
+        "UserName": "Lamb",
+        "DatumRodjenja": "1973-03-23",
+        "Kreiran": "2020-04-06",
+        "PosljednjeAktivan": "2020-05-14",
+        "MjestoStanovanja": "Teasdale",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/men/88.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Spencer",
+        "Prezime": "Fulton",
+        "Spol": "male",
+        "UserName": "Spencer",
+        "DatumRodjenja": "1970-11-06",
+        "Kreiran": "2020-05-14",
+        "PosljednjeAktivan": "2020-06-17",
+        "MjestoStanovanja": "Cleary",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/men/98.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    },
+    {
+        "Ime": "Richmond",
+        "Prezime": "Newman",
+        "Spol": "male",
+        "UserName": "Richmond",
+        "DatumRodjenja": "1995-02-07",
+        "Kreiran": "2019-10-31",
+        "PosljednjeAktivan": "2020-05-28",
+        "MjestoStanovanja": "Woodlands",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/men/26.jpg",
+                "IsMain": true,
+                "Docs": null
+            }
+        ]
+    }
+]

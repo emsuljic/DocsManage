@@ -7,13 +7,13 @@ import  $  from 'jquery';
   styleUrls: ['./protocol-book.component.css']
 })
 export class ProtocolBookComponent implements OnInit {
-  @ViewChild('dataTable') table!: { nativeElement: any; };
+  //@ViewChild('dataTable') table!: { nativeElement: any; };
   dataTable: any;
  
   constructor() { }
 
   ngOnInit(): void {
-     this.dataTable = $(this.table?.nativeElement);
+    //this.dataTable = $(this.table?.nativeElement);
     // this.dataTable.dataTable();
     
   }
