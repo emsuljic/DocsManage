@@ -1,0 +1,26 @@
+[
+    {
+      "NaslovDokuemnta": "Knowles",
+      "VrstaDokumenta": "Faktura",
+      "TipDokumenta": "Ulazni",
+      "DatumDokumenta": "2020-03-24",
+      "DatumUnosaDokumenta": "2020-05-08",
+      "FizickoLice": "Anderson",
+      "Napomena": "Lorem aliqua commodo incididunt do reprehenderit ex non consectetur laborum non culpa occaecat laborum.",
+      "Vrijednost": 1,
+      "Posiljaoc": "Merrill",
+      "Primaoc": "Ellen"
+    },
+    {
+      "NaslovDokuemnta": "English",
+      "VrstaDokumenta": "Faktura",
+      "TipDokumenta": "Ulazni",
+      "DatumDokumenta": "2020-06-26",
+      "DatumUnosaDokumenta": "2020-02-25",
+      "FizickoLice": "Sweeney",
+      "Napomena": "Proident exercitation sunt nulla id ipsum minim nisi consectetur do.",
+      "Vrijednost": 1,
+      "Posiljaoc": "Watts",
+      "Primaoc": "Josefa"
+    }
+  ]

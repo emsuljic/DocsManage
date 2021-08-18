@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
@@ -12,11 +13,11 @@ namespace API.Data
     {
         public static async Task SeedUsers(DataContext context)
         {
-            if(await context.Users.AnyAsync()) return;
+            if (await context.Users.AnyAsync()) return;
 
             var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
-            foreach(var user in users)
+            foreach (var user in users)
             {
                 using var hmac = new HMACSHA512();
 
@@ -27,6 +28,31 @@ namespace API.Data
                 context.Users.Add(user);
             }
 
+            await context.SaveChangesAsync();
+        }
+
+        public static async Task SeedDocument(DataContext context)
+        {
+            if (await context.Docs.AnyAsync()) return;
+
+            var docData = await System.IO.File.ReadAllTextAsync("Data/DocumentsSeedData.json");
+            var documents = JsonSerializer.Deserialize<List<Documents>>(docData);
+            foreach (var document in documents)
+            {
+                document.NaslovDokumenta = document.NaslovDokumenta;
+                document.VrstaDokumenta = document.VrstaDokumenta;
+                document.TipDokumenta = document.TipDokumenta;
+                document.DatumDokumenta = Convert.ToDateTime(document.DatumDokumenta);
+                document.DatumUnosaDokumenta = Convert.ToDateTime(document.DatumUnosaDokumenta);
+                document.FizickoLice = document.FizickoLice;
+                document.Napomena = document.Napomena;
+                document.Vrijednost = document.Vrijednost;
+                document.Posiljaoc = document.Posiljaoc;
+                document.Primaoc = document.Primaoc;
+                document.AppUserId = document.AppUserId;
+                
+                context.Docs.Add(document);
+            }
             await context.SaveChangesAsync();
         }
     }

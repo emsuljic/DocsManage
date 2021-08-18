@@ -7,9 +7,13 @@ namespace API.DTOs
     {
         public int Id { get; set; }
         public string NaslovDokumenta { get; set; }
-        public enum VrstaDokumenta { Faktura, Potvrda, Ugovor, Ponuda, Opomena, Dopis }
+        // public enum VrstaDokumenta { Faktura, Potvrda, Ugovor, Ponuda, Opomena, Dopis }
 
-        public enum TipDokumenta { Ulazni, Izlazni }
+        // public enum TipDokumenta { Ulazni, Izlazni }
+
+        public string VrstaDokumenta { get; set; }
+
+        public string TipDokumenta { get; set; }
 
         public DateTime? DatumDokumenta { get; set; }
 
@@ -19,14 +23,12 @@ namespace API.DTOs
 
         public int? Vrijednost { get; set; }
 
-        #nullable enable
+#nullable enable
         public string? Posiljaoc { get; set; }
         public string? Primaoc { get; set; }
 
-        #nullable disable
-
-        public string PublicId { get; set; }
-        public AppUser AppUser { get; set; }
+#nullable disable
         public int AppUserId { get; set; }
+
     }
 }

@@ -1,27 +1,57 @@
 <button (click)="back()" class="btn btn-primary btn-md mr-2 mb-5">Vrati na početnu stranicu</button>
 
-<form #registerForm="ngForm" autocomplete="off">
+<form #registerForm="ngForm" (ngSubmit)="addDocument()" autocomplete="off">
     <h2 class="text-center text-primary">Unos dokumenta</h2>
     <h6 class="text-center text-primary">Protokol broj se automatski dodjeljuje</h6>
     <hr>
-
-    <!-- <div class="form-group">
-        <input type="number" class="form-control" name="id" [(ngModel)]="model.Id" placeholder="Protokol broj">
-    </div> -->
-
+    
     <div class="form-group">
         <input type="text" class="form-control" name="naslovDoc" [(ngModel)]="model.NaslovDokumenta"
             placeholder="Naslov dokumenta">
     </div>
 
     <div class="form-group">
-        <input type="enum" class="form-control" name="vrsta" [(ngModel)]="model.VrstaDokumenta"
-            placeholder="Vrsta dokumenta">
+        <h6><span>Vrsta dokumenta:</span></h6>
+        <select (change)="selectChangeHandlerVrsta($event)">
+            <option value="Faktura">Faktura</option>
+            <option value="Potvrda">Potvrda</option>
+            <option value="Ugovor">Ugovor</option>
+            <option value="Ponuda">Ponuda</option>
+            <option value="Opomena">Opomena</option>
+            <option value="Dopis">Dopis</option>
+        </select>
     </div>
 
     <div class="form-group">
-        <input type="enum" class="form-control" name="tip" [(ngModel)]="model.TipDokumenta" placeholder="Tip Dokumenta">
+        <h6><span>Tip dokumenta:</span></h6>
+        <select (change)="selectChangeHandlerTip($event)">
+            <option value="Ulazni">Ulazni</option>
+            <option value="Izlazni">Izlazni</option>
+        </select>
     </div>
+
+
+    <!-- <div class="form-group">
+        <label for="">VrstaDokumenta</label>
+        <select>
+            <option *ngFor="let vrsta of vrstaDokumenta"
+                [value]=" vrsta">
+                {{VrstaDokumenta2LabelMapping[vrsta]}}
+            </option>
+        </select>
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label for="">TipDokumenta</label>
+        <select>
+            <option *ngFor="let tip of tipDokumenta"
+                [value]=" tip">
+                {{TipDokumenta2LabelMapping[tip]}}
+            </option>
+        </select>
+    </div> -->
+
+
 
     <div class="form-group">
         <input type="date" class="form-control" name="datum" [(ngModel)]="model.DatumDokumenta"
@@ -55,7 +85,7 @@
     </div>
 
     <div class="form-group text-center">
-        <button class="btn btn-success mr-2" type="submit">Unesi</button>
+        <button class="btn btn-success mr-2" type="submit" (click)="addDocument()">Unesi</button>
         <button class="btn btn-default mr-2" type="button" (click)="cancel()">Otkaži</button>
     </div>
 </form>

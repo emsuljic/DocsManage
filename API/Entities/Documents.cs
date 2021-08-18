@@ -11,9 +11,13 @@ namespace API.Entities
         [Key]
         public int Id { get; set; }
         public string NaslovDokumenta { get; set; }
-        public enum VrstaDokumenta { Faktura, Potvrda, Ugovor, Ponuda, Opomena, Dopis }
 
-        public enum TipDokumenta { Ulazni, Izlazni }
+        public string VrstaDokumenta { get; set; }
+
+        public string TipDokumenta { get; set; }
+        // public enum VrstaDokumenta { Faktura, Potvrda, Ugovor, Ponuda, Opomena, Dopis }
+
+        // public enum TipDokumenta { Ulazni, Izlazni }
 
         public DateTime? DatumDokumenta { get; set; }
 
@@ -29,7 +33,6 @@ namespace API.Entities
         public string? Primaoc { get; set; }
 
 #nullable disable
-
     public string PublicId { get; set; }
     public AppUser AppUser { get; set; }
     public int AppUserId { get; set; }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using API.Entities;
 using API.Interfaces;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
@@ -9,8 +10,10 @@ namespace API.Data
     public class DocumentsRepository : IDocumentsRepository
     {
         private readonly DataContext _context;
-        public DocumentsRepository(DataContext context)
+        private readonly IMapper _mapper;
+        public DocumentsRepository(DataContext context, IMapper mapper)
         {
+            _mapper = mapper;
             _context = context;
 
         }
@@ -22,12 +25,14 @@ namespace API.Data
 
         public async Task<IEnumerable<Documents>> GetDocsAsync()
         {
-             return await _context.Docs.ToListAsync();
+            return await _context.Docs.ToListAsync();
+            //.Include(u => u.Users)
+            
         }
 
         public async Task<bool> SaveAllAsync()
         {
-            return await _context.SaveChangesAsync()>0;
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public void Update(Documents docs)
